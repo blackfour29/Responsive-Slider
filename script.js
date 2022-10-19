@@ -40,7 +40,6 @@
       pixelValue = 0;
     }
     if (pixels > 0) {
-      // pixelValue = -1200;
       pixelValue = contentWidth * (sliderImages.length - 1) * -1;
     }
     sliderImagesContainer.style.transform = `translateX(${pixelValue}px)`;
@@ -51,14 +50,14 @@
     sliderBottomControls[sliderBottomIndex].style.backgroundColor = '#fff';
   }
 
-  let sliderInterval = setInterval(runSlider, 2000);
+  let sliderInterval = setInterval(runSlider, 4500);
 
   sliderImagesContainer.addEventListener('mouseover', () => {
     clearInterval(sliderInterval);
   });
 
   sliderImagesContainer.addEventListener('mouseout', () => {
-    sliderInterval = setInterval(runSlider, 2000);
+    sliderInterval = setInterval(runSlider, 4500);
   });
 
   function runSlider() {
