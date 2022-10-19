@@ -1,0 +1,96 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rebeccapurple;
+}
+
+.content{
+  width: 70%;
+  max-width: 600px;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slider__images-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  transition: all 1s ease;
+}
+
+.slider__image{
+  height: 100%;
+  width: 100%;
+}
+
+.slider__bottom-controls-container{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.slider__bottom-control{
+  height: 15px;
+  width: 50px;
+  border: 2px solid #fff;
+  margin: 0 3px;
+  cursor: pointer; 
+}
+
+.slide__control:hover{ /* this doesn't do anything due to JS right now*/
+  background-color: #fff;
+}
+
+.slider__slide-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  margin: 0 2px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.slider__slide-arrow:hover{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.slider__slide-right{
+  right: 0;
+}
+
+.slider__arrow-icon{
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer{
+  position: absolute;
+  bottom: 20px;
+  color: #fff;
+}
+
+
+.footer__link:visited{
+  color: #fff;
+}
+
+@media screen and (max-width: 500px){
+  .content{
+    width: 100%;
+  }
+}
